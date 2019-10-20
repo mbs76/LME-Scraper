@@ -10,4 +10,8 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
+page = requests.get("http://www.lme.com")
+soup = BeautifulSoup(page.content)
+#print(soup.prettify())
+
 
