@@ -10,4 +10,9 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
-
+def storeURL(str):
+    page = requests.get(str)
+    soup = BeautifulSoup(page.content)
+    print(soup.prettify())
+    
+storeURL("https://www.lme.com")
