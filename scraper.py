@@ -10,7 +10,10 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> db0e8cc20b52dd6520f31a95c56a5b05ac4063ca
 <<<<<<< HEAD
 page = requests.get("http://www.lme.com")
 soup = BeautifulSoup(page.content)
@@ -18,7 +21,10 @@ soup = BeautifulSoup(page.content)
 
 
 =======
+<<<<<<< HEAD
 
+=======
+>>>>>>> db0e8cc20b52dd6520f31a95c56a5b05ac4063ca
 def storeURL(str):
     page = requests.get(str)
     soup = BeautifulSoup(page.content)
@@ -33,4 +39,8 @@ def storeURL(str):
             print(repr(sibling)) 
     
 storeURL("https://www.lme.com")
+<<<<<<< HEAD
 #>>>>>>> 484022ac7588645fc51384c8cec429ec0aac831c
+=======
+>>>>>>> 484022ac7588645fc51384c8cec429ec0aac831c
+>>>>>>> db0e8cc20b52dd6520f31a95c56a5b05ac4063ca
