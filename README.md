@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y ciclo de vida de los datos...(continuar)
+Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y ciclo de vida de los datos_ ...(continuar)
 
 ## Miembros del equipo (por orden alfabético)
 
