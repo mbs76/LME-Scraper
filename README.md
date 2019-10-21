@@ -7,7 +7,7 @@ Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y c
 ## Miembros del equipo (por orden alfabético)
 
 La actividad ha sido realizada por:
----------------
+
 * Manuel Betancor Sánchez - 43.287170C - Aula 2
 * María Dolores Navalón Hernández - (poner DNI) - Aula 1
 
