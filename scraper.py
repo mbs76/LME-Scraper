@@ -37,8 +37,8 @@ def storeURL(str):
     
     for tr in trs:
     #for row in body_tag.findAll('tr'):
-        producto = tr.text
-        print("Producto: ", producto)
+        producto = tr.findAll('th')
+        print("Producto: ", producto[0].get_text().strip())
         cantidad = tr.findAll('td')
         print("Cantidad: ",  cantidad[0].get_text().strip())
         
