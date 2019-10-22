@@ -10,17 +10,6 @@ import requests
 from bs4 import BeautifulSoup
 import sys
 
-"""
-<<<<<<< HEAD
-page = requests.get("http://www.lme.com")
-soup = BeautifulSoup(page.content)
-#print(soup.prettify())
-
-
-=======
-<<<<<<< HEAD
-
-"""
 
 def storeURL(str):
     page = requests.get(str)
