@@ -29,18 +29,31 @@ def storeURL(str):
     head_tag = tag.thead
     print("Fecha: ", head_tag.get_text().strip())
     body_tag = tag.tbody
+    
+    f = open("lme.csv", "a")
   
     trs = body_tag.findAll('tr')
     
     for tr in trs:
+        linea = ""
         producto = tr.findAll('th')
         print("Producto: ", producto[0].get_text().strip())
         cantidad = tr.findAll('td')
         print("Cantidad: ",  cantidad[0].get_text().strip())
+        linea = head_tag.get_text().strip() + "; " + producto[0].get_text().strip() + "; " + cantidad[0].get_text().strip() + "\n"
+        print(linea)
+        f.write(linea)
+    
+    f.close()
+"""
+    f.open("lme.csv")
+    f.read()
+    f.close()
         
-
+"""
 
 storeURL("https://www.lme.com")
+
 
 
 
