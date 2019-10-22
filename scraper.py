@@ -25,29 +25,20 @@ soup = BeautifulSoup(page.content)
 def storeURL(str):
     page = requests.get(str)
     soup = BeautifulSoup(page.content)
-    #print(soup.prettify())
     tag = soup.table
     head_tag = tag.thead
     print("Fecha: ", head_tag.get_text().strip())
     body_tag = tag.tbody
-    
-    #print(body_tag.get_text())
   
     trs = body_tag.findAll('tr')
     
     for tr in trs:
-    #for row in body_tag.findAll('tr'):
         producto = tr.findAll('th')
         print("Producto: ", producto[0].get_text().strip())
         cantidad = tr.findAll('td')
         print("Cantidad: ",  cantidad[0].get_text().strip())
         
-"""
-    for sibling  in body_tag.next_siblings:
-            print(head_tag.get_text())    
-            print(repr(sibling))
-    
-"""
+
 
 storeURL("https://www.lme.com")
 
