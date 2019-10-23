@@ -9,6 +9,7 @@ Created on Sun Oct 20 12:17:05 2019
 import requests
 from bs4 import BeautifulSoup
 import sys
+import os
 
 
 def storeURL(str):
@@ -25,6 +26,8 @@ def storeURL(str):
     fecha = head_tag.get_text()[separador + 1:].strip()
     
     f = open("lme.csv", "a")
+    if os.stat('lme.csv').st_size == 0:
+        f.write("Date, Product, Currency, Value\n")
   
     trs = body_tag.findAll('tr')
     
