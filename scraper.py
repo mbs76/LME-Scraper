@@ -12,12 +12,17 @@ import sys
 
 
 def storeURL(str):
+    
     page = requests.get(str)
     soup = BeautifulSoup(page.content)
+    
     tag = soup.table
     head_tag = tag.thead
-    print("Fecha: ", head_tag.get_text().strip())
     body_tag = tag.tbody
+    
+    separador = head_tag.get_text().find(":")
+    moneda = head_tag.get_text()[0:separador].strip()
+    fecha = head_tag.get_text()[separador + 1:].strip()
     
     f = open("lme.csv", "a")
   
@@ -25,13 +30,17 @@ def storeURL(str):
     
     for tr in trs:
         linea = ""
+        print("Fecha: " + fecha)
+        linea = fecha
         producto = tr.findAll('th')
         print("Producto: ", producto[0].get_text().strip())
+        linea += ", " + producto[0].get_text().strip()
+        linea += ", " + moneda
         cantidad = tr.findAll('td')
         print("Cantidad: ",  cantidad[0].get_text().strip())
-        linea = head_tag.get_text().strip() + '; ' + producto[0].get_text().strip() + '; "' + cantidad[0].get_text().strip() + '"\n'
+        linea += ', "' + cantidad[0].get_text().strip() + '"'
         print(linea)
-        f.write(linea)
+        #f.write(linea)
     
     f.close()
 
