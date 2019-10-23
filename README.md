@@ -8,8 +8,8 @@ Esta práctica se ha realizado bajo el contexto de la asignatura _Tipología y c
 
 La actividad ha sido realizada por:
 
-* Manuel Betancor Sánchez - 43.287170C - Aula 2
-* María Dolores Navalón Hernández - (poner DNI) - Aula 1
+* Manuel Betancor Sánchez - 43287170C - Aula 2
+* María Dolores Navalón Hernández - 52774328T - Aula 1
 
 ## Ficheros del código fuente
 
