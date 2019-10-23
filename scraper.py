@@ -38,9 +38,9 @@ def storeURL(str):
         linea += ", " + moneda
         cantidad = tr.findAll('td')
         print("Cantidad: ",  cantidad[0].get_text().strip())
-        linea += ', "' + cantidad[0].get_text().strip() + '"'
+        linea += ', "' + cantidad[0].get_text().strip() + '"\n'
         print(linea)
-        #f.write(linea)
+        f.write(linea)
     
     f.close()
 
