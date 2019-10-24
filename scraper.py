@@ -34,7 +34,7 @@ def storeURL(str):
         for tr in trs:
             metal = tr.th.get_text().strip()
             valor = tr.td.get_text().strip()
-            print("Fecha: {0}\n Producto: {1}\n Moneda: {2}\n Cantidad: {3}\n".format(fecha, metal, moneda, valor))
+            print("Fecha: {0}\nProducto: {1}\nMoneda: {2}\nCantidad: {3}\n".format(fecha, metal, moneda, valor))
             data.append((fecha,metal,moneda,valor))
             
         with open("lme.csv", "a") as f:
