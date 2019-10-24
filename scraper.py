@@ -8,7 +8,7 @@ Created on Sun Oct 20 12:17:05 2019
 
 import requests
 from bs4 import BeautifulSoup
-import sys
+import csv
 import os
 
 
@@ -23,32 +23,26 @@ def storeURL(str):
         tag = soup.table
         head_tag = tag.thead
         body_tag = tag.tbody
-    
+            
+        data = []
         separador = head_tag.get_text().find(":")
         moneda = head_tag.get_text()[0:separador].strip()
         fecha = head_tag.get_text()[separador + 1:].strip()
-    
-        f = open("lme.csv", "a")
-        if os.stat('lme.csv').st_size == 0:
-            f.write("Date, Product, Currency, Value\n")
   
         trs = body_tag.findAll('tr')
     
         for tr in trs:
-            linea = ""
-            print("Fecha: " + fecha)
-            linea = fecha
-            producto = tr.th
-            print("Producto: ", producto.get_text().strip())
-            linea += ", " + producto.get_text().strip()
-            linea += ", " + moneda
-            cantidad = tr.td
-            print("Cantidad: ",  cantidad.get_text().strip())
-            linea += ', "' + cantidad.get_text().strip() + '"\n'
-            print(linea)
-            f.write(linea)
-    
-        f.close()
+            metal = tr.th.get_text().strip()
+            valor = tr.td.get_text().strip()
+            print("Fecha: {0}\n Producto: {1}\n Moneda: {2}\n Cantidad: {3}\n".format(fecha, metal, moneda, valor))
+            data.append((fecha,metal,moneda,valor))
+            
+        with open("lme.csv", "a") as f:
+            writer = csv.writer(f)
+            if os.stat('lme.csv').st_size == 0:
+                writer.writerow(["Date", "Product", "Currency", "Value"])
+            for fecha,metal,moneda,valor in data:
+                writer.writerow([fecha,metal,moneda,valor])
      
     else:
         print ("Error code %s" % page.status_code)
