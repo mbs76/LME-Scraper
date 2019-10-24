@@ -38,13 +38,13 @@ def storeURL(str):
             linea = ""
             print("Fecha: " + fecha)
             linea = fecha
-            producto = tr.findAll('th')
-            print("Producto: ", producto[0].get_text().strip())
-            linea += ", " + producto[0].get_text().strip()
+            producto = tr.th
+            print("Producto: ", producto.get_text().strip())
+            linea += ", " + producto.get_text().strip()
             linea += ", " + moneda
-            cantidad = tr.findAll('td')
-            print("Cantidad: ",  cantidad[0].get_text().strip())
-            linea += ', "' + cantidad[0].get_text().strip() + '"\n'
+            cantidad = tr.td
+            print("Cantidad: ",  cantidad.get_text().strip())
+            linea += ', "' + cantidad.get_text().strip() + '"\n'
             print(linea)
             f.write(linea)
     
