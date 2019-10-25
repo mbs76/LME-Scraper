@@ -32,7 +32,7 @@ def storeURL(str):
         trs = body_tag.findAll('tr')
     
         for tr in trs:
-            metal = tr.th.get_text().strip()
+            metal = tr.th.get_text().replace("*","").strip()
             valor = tr.td.get_text().strip()
             print("Fecha: {0}\nProducto: {1}\nMoneda: {2}\nCantidad: {3}\n".format(fecha, metal, moneda, valor))
             data.append((fecha,metal,moneda,valor))
@@ -42,7 +42,7 @@ def storeURL(str):
             if os.stat('lme.csv').st_size == 0:
                 writer.writerow(["Date", "Product", "Currency", "Value"])
             for fecha,metal,moneda,valor in data:
-                writer.writerow([fecha,metal,moneda,valor])
+                writer.writerow([fecha,metal,moneda,valor])           
      
     else:
         print ("Error code %s" % page.status_code)
