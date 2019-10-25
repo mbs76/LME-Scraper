@@ -22,6 +22,7 @@ La actividad ha sido realizada por:
 ## Otros ficheros
 
 **src/practica.pdf**: Documento detallado de la actividad
+
 **src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
 
 ## Recursos
