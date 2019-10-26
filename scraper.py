@@ -45,7 +45,7 @@ def storeURL(str):
                 writer.writerow([fecha,metal,moneda,valor])           
      
     else:
-        print ("Error code %s" % page.status_code)
+        print ("Error code {}".format(page.status_code))
 
 
 storeURL("https://www.lme.com")
