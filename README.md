@@ -6,7 +6,7 @@ Esta práctica se ha realizado en el contexto de la asignatura Tipología y cicl
 
 En la práctica se solicitaba la elección de una web, para posteriormente identificar los datos relevantes y realizar una extracción de éstos a través de alguna de las diferentes técnicas explicadas en el Bloque 1 de la asignatura, indicando como método preferente el web scraping.
 
-La web escogida ha sido la del Mercado de Metales de Londres, https://www.lme.com, en la cual se refleja de manera diaria las diferentes cotizaciones adquiridas por los metales que procesa.
+La web escogida ha sido la del Mercado de Metales de Londres, https://www.lme.com, en la cual se refleja de manera diaria las diferentes cotizaciones de los metales.
 
 ## Miembros del equipo (por orden alfabético)
 
