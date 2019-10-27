@@ -21,7 +21,7 @@ La actividad ha sido realizada por:
 
 ## Otros ficheros
 
-* **src/practica.pdf**: Documento detallado de la actividad
+* **src/Práctica_1_LME-Scraper.pdf**: Documento detallado de la actividad
 * **src/AnalisisDatasetLME.ipynb** Análisis y gráficas normalizadas 
 * **src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
-
+* **src/LICENSE**: Licencia del código
