@@ -13,18 +13,15 @@ La actividad ha sido realizada por:
 
 ## Ficheros del código fuente
 
-**src/scraper.py**: Código en python de la práctica.
+* **src/scraper.py**: Código en python de la práctica.
 
 ## Dataset
 
-**src/lme.csv**: Dataset obtenido.
+* **src/lme.csv**: Dataset obtenido.
 
 ## Otros ficheros
 
-**src/practica.pdf**: Documento detallado de la actividad
+* **src/practica.pdf**: Documento detallado de la actividad
+* **src/AnalisisDatasetLME.ipynb** Análisis y gráficas normalizadas 
+* **src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
 
-**src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
-
-## Recursos
-
-(poner recursos)
