@@ -18,7 +18,7 @@ def storeURL(str):
     
     if page.status_code == 200:
     
-        soup = BeautifulSoup(page.content)
+        soup = BeautifulSoup(page.content, "lxml")
     
         tag = soup.table
         head_tag = tag.thead
