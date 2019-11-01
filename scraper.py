@@ -53,33 +53,48 @@ Es importante personalizar la ruta dependiendo del equipo a utilizar
 """
 
 def load_requests(source_url):
-    r = requests.get(source_url, stream = True)
-    if r.status_code == 200:
+    
+    image = requests.get(source_url, stream = True)
+    
+    if image.status_code == 200:
+        
         aSplit = source_url.split('/')
         # La ruta debe ser cambiada dependiendo del equipo a utilizar
-        ruta = "/Users/MBS/Pictures/"+aSplit[len(aSplit)-1]
-        print(ruta)
-        output = open(ruta,"wb")
-        for chunk in r:
-            output.write(chunk)
-        output.close()
+        path = "/Users/marianavalon/Documents/GitHub/LME-Scraper/Pictures/"+aSplit[len(aSplit)-1]
+        print(path)
+        with open(path, "wb") as output:
+            for chunk in image:
+                output.write(chunk)
+    
+    else:
+        print ("Error code {}".format(image.status_code))
 
-
-storeURL("https://www.lme.com")
 
 """
 Código de captura de todas las imágenes
 de la web www.lme.com/Metals
 """
 
-url = 'https://www.lme.com/Metals'
-page = requests.get(url)
-soup = BeautifulSoup(page.content)
+def storeImages(url):
 
-for img in soup.findAll('img'):
-    image = (img.get('src'))
-    image = image[0:image.find('?')]
-    load_requests("https://www.lme.com"+image)
+    page = requests.get(url)
+     
+    if page.status_code == 200:
+        
+        soup = BeautifulSoup(page.content, "lxml")
+    
+        for img in soup.findAll('img'):
+            image = (img.get('src'))
+            image = image[0:image.find('?')]
+            load_requests("https://www.lme.com"+image)
+    else:
+        print ("Error code {}".format(page.status_code))
+
+
+storeURL("https://www.lme.com")
+storeImages("https://www.lme.com/Metals")
+
+
 
 
 
