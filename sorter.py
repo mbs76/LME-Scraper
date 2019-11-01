@@ -17,6 +17,9 @@ minor_metals = set(["LME Cobalt"])
 precious_metals = set(["LME Gold", "LME Silver", "LME Platinum", "LME Palladium"])
 
 
+# Función que clasifica cada metal y genera un nuevo fichero csv con el campo 
+# de la categoría a la que pertenece
+
 def sorter(file_csv):
      
     dataset = pd.read_csv(file_csv, sep=',')
@@ -26,7 +29,6 @@ def sorter(file_csv):
         if os.stat('lme_sorter.csv').st_size == 0:
             writer.writerow(["Date", "Product", "Currency", "Value", "Type"])
         for row in dataset.itertuples():
-            print(row)
             if row.Product in ferrous_metals: 
                 tipo = "Ferrous metals"
             elif row.Product in non_ferreous_metals: 
