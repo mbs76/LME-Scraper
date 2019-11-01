@@ -58,9 +58,9 @@ def load_requests(source_url):
     
     if image.status_code == 200:
         
-        aSplit = source_url.split('/')
+        name = source_url.split('/')[-1]
         # La ruta debe ser cambiada dependiendo del equipo a utilizar
-        path = "/Users/marianavalon/Documents/GitHub/LME-Scraper/Pictures/"+aSplit[len(aSplit)-1]
+        path = "/Users/marianavalon/Documents/GitHub/LME-Scraper/Pictures/"+name
         print(path)
         with open(path, "wb") as output:
             for chunk in image:
