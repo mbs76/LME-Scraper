@@ -47,9 +47,39 @@ def storeURL(str):
     else:
         print ("Error code {}".format(page.status_code))
 
+"""
+Procedimiento que descarga la imagen filtrada en el url
+Es importante personalizar la ruta dependiendo del equipo a utilizar
+"""
+
+def load_requests(source_url):
+    r = requests.get(source_url, stream = True)
+    if r.status_code == 200:
+        aSplit = source_url.split('/')
+        # La ruta debe ser cambiada dependiendo del equipo a utilizar
+        ruta = "/Users/MBS/Pictures/"+aSplit[len(aSplit)-1]
+        print(ruta)
+        output = open(ruta,"wb")
+        for chunk in r:
+            output.write(chunk)
+        output.close()
+
 
 storeURL("https://www.lme.com")
 
+"""
+Código de captura de todas las imágenes
+de la web www.lme.com/Metals
+"""
+
+url = 'https://www.lme.com/Metals'
+page = requests.get(url)
+soup = BeautifulSoup(page.content)
+
+for img in soup.findAll('img'):
+    image = (img.get('src'))
+    image = image[0:image.find('?')]
+    load_requests("https://www.lme.com"+image)
 
 
 
