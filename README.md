@@ -17,11 +17,13 @@ La actividad ha sido realizada por:
 
 ## Ficheros del código fuente
 
-* **src/scraper.py**: Código en python de la práctica.
+* **src/scraper.py**: Código en python de la práctica
+* **src/sorter.py**: Código en python clasificador de metales
 
 ## Dataset
 
-* **src/lme.csv**: Dataset obtenido.
+* **src/lme.csv**: Dataset obtenido
+* **src/lme_sorter.csv**: Dataset obtenido y clasificado
 
 ## Otros ficheros
 
@@ -29,3 +31,4 @@ La actividad ha sido realizada por:
 * **src/AnalisisDatasetLME.ipynb** Análisis y gráficas normalizadas 
 * **src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
 * **src/LICENSE**: Licencia del código
+* **src/Pictures**: Carpeta con las imágenes adquiridas de www.lme.com/Metals
