@@ -10,6 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 import csv
 import os
+from tkinter import filedialog
 
 
 def storeURL(str):
@@ -59,8 +60,7 @@ def load_requests(source_url):
     if image.status_code == 200:
         
         name = source_url.split('/')[-1]
-        # La ruta debe ser cambiada dependiendo del equipo a utilizar
-        path = "/Users/marianavalon/Documents/GitHub/LME-Scraper/Pictures/"+name
+        path = directory + "/" + name
         print(path)
         with open(path, "wb") as output:
             for chunk in image:
@@ -92,6 +92,7 @@ def storeImages(url):
 
 
 storeURL("https://www.lme.com")
+directory = filedialog.askdirectory()
 storeImages("https://www.lme.com/Metals")
 
 
