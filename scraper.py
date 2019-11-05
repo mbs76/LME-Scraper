@@ -92,7 +92,7 @@ def storeImages(url):
 
 
 storeURL("https://www.lme.com")
-directory = filedialog.askdirectory()
+directory = filedialog.askdirectory(initialdir=os.getcwd(),title='Directorio para la descarga de imágenes')
 storeImages("https://www.lme.com/Metals")
 
 
