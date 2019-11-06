@@ -50,7 +50,6 @@ def storeURL(str):
 
 """
 Procedimiento que descarga la imagen filtrada en el url
-Es importante personalizar la ruta dependiendo del equipo a utilizar
 """
 
 def load_requests(source_url):
