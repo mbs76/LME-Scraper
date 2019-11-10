@@ -12,8 +12,8 @@ La web escogida ha sido la del Mercado de Metales de Londres, https://www.lme.co
 
 La actividad ha sido realizada por:
 
-* Manuel Betancor Sánchez - 43287170C - Aula 2
-* María Dolores Navalón Hernández - 52774328T - Aula 1
+* Manuel Betancor Sánchez - Aula 2
+* María Dolores Navalón Hernández - Aula 1
 
 ## Ficheros del código fuente
 
