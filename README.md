@@ -12,8 +12,8 @@ La web escogida ha sido la del Mercado de Metales de Londres, https://www.lme.co
 
 La actividad ha sido realizada por:
 
-* Manuel Betancor Sánchez - 43287170C - Aula 2
-* María Dolores Navalón Hernández - 52774328T - Aula 1
+* Manuel Betancor Sánchez - Aula 2
+* María Dolores Navalón Hernández - Aula 1
 
 ## Ficheros del código fuente
 
@@ -28,7 +28,8 @@ La actividad ha sido realizada por:
 ## Otros ficheros
 
 * **src/Práctica_1_LME-Scraper.pdf**: Documento detallado de la actividad
-* **src/AnalisisDatasetLME.ipynb** Análisis y gráficas normalizadas 
+* **src/AnalisisDatasetLME.ipynb** Análisis exploratorio y gráficas normalizadas 
 * **src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
 * **src/LICENSE**: Licencia del código
+* **src/LICENSE_DATASETS**: Licencia de los datasets
 * **src/Pictures**: Carpeta con las imágenes adquiridas de www.lme.com/Metals
