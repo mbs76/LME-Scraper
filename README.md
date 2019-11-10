@@ -28,7 +28,8 @@ La actividad ha sido realizada por:
 ## Otros ficheros
 
 * **src/Práctica_1_LME-Scraper.pdf**: Documento detallado de la actividad
-* **src/AnalisisDatasetLME.ipynb** Análisis y gráficas normalizadas 
+* **src/AnalisisDatasetLME.ipynb** Análisis exploratorio y gráficas normalizadas 
 * **src/Gráfico_dinámico.xlsx**: Hoja de Excel con tabla y gráfico dinámico del dataset
 * **src/LICENSE**: Licencia del código
+* **src/LICENSE_DATASETS**: Licencia de los datasets
 * **src/Pictures**: Carpeta con las imágenes adquiridas de www.lme.com/Metals
