@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Oct 20 12:17:05 2019
 
-@authors: mbs76 & mnavalon 
-"""
+## Created on Sun Oct 20 12:17:05 2019
+## @authors: mbs76 & mnavalon 
+
 import os
 import csv
 import pandas as pd
@@ -18,8 +17,10 @@ minor_metals = set(["LME Cobalt"])
 precious_metals = set(["LME Gold", "LME Silver", "LME Platinum", "LME Palladium"])
 
 
-# Función que clasifica cada metal y genera un nuevo fichero csv con el campo 
-# de la categoría a la que pertenece
+### -------------------------------------------------------------------------
+### Función que clasifica cada metal y genera un nuevo fichero csv  
+### con el campo de la categoría a la que pertenece
+### -------------------------------------------------------------------------
 
 def sorter(file_csv):
     
