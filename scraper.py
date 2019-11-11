@@ -111,7 +111,7 @@ storeURL("https://www.lme.com")
 # versión estable en la que se indica el directorio directamente en el código
 # directory = filedialog.askdirectory(initialdir=os.getcwd(),title='Directorio para la descarga de imágenes')
  
-directory = "/Users/marianavalon/Documents/GitHub/LME-Scraper/Pictures" 
+directory = "/Users/usuario/Documents/GitHub/LME-Scraper/Pictures" 
 
 storeImages("https://www.lme.com/Metals")
 
