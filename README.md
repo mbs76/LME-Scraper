@@ -34,4 +34,4 @@ La actividad ha sido realizada por:
 * **src/LICENSE_DATASETS**: Licencia de los datasets
 * **src/Pictures**: Carpeta con las imágenes adquiridas de www.lme.com/Metals
 
-### Más información en la wiki de github
+### Más información en la Wiki
